@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,32 @@
     <title>XI Timetable</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
 </head>
+
 <body>
-    <h2>Monday</h2>
-    <table>
-        <thead>
-            <td>Lesson</td>
-            <td>Location</td>
-        </thead>
-        <tbody>
-            {% for lesson in lessons %}
+    <div class="container">
+        <h2>{{day}}</h2>
+        <table>
+            <thead>
+                <td class="timing">Times</td>
+                <td>Lesson</td>
+                <td>Location</td>
+            </thead>
+            <tbody>
+                {% for time, lesson in zip(times, lessons) %}
                 <tr>
+                    <td class="timing">{{time}}</td>
                     <td>{{ lesson.name }}</td>
                     <td>{{ lesson.location }}</td>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+            <a href="{{url_for('set_subjects')}}">
+                <p>Change Subjects</p>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>

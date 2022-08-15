@@ -5,8 +5,11 @@ from zoneinfo import ZoneInfo
 from ast import literal_eval
 from flask import *
 
+with open('data.json') as f:
+    data = json.load(f)
 
 app = Flask(__name__)
+app.jinja_env.globals.update(zip=zip)
 
 
 def get_current_dt() -> datetime:
@@ -25,16 +28,32 @@ def set_subjects():
 
 @app.route("/")
 def index():
+    #dt = get_current_dt()
+    dt = datetime(2022, 8, 15)
+    day = request.args.get("day", dt.strftime('%a').upper())
+    if day.upper() not in ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']:
+        day = dt.strftime("%a").upper()
+        
     # Check if subject cookie has been set
     if not request.cookies.get("subjects"):
         return redirect(url_for("set_subjects"))
 
     lessons = Lesson.get_lessons(
-        get_current_dt(),
+        day,
         literal_eval(request.cookies["subjects"])["section"],
         [
             literal_eval(request.cookies["subjects"])[opt]
             for opt in ["OPT-A", "OPT-B", "OPT-C", "OPT-D"]
         ],
     )
-    return render_template("index.html", lessons=lessons)
+    with open('data.json') as f:
+        data = json.load(f)
+    if day == 'FRI':
+        pass
+    else:
+        times = data["Timings"]['Regular']
+        t = []
+        for start, end in times:
+            t.append(f'{start}\n{end}')
+        
+    return render_template("index.html", lessons=lessons, day=dt.strftime("%A"), times=t)

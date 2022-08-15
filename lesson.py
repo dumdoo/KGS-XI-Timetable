@@ -1,7 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass
 import json
-from datetime import datetime
+from copy import deepcopy
+
 
 
 @dataclass
@@ -10,21 +11,19 @@ class Lesson:
     location: str
 
     @classmethod
-    def get_lessons(cls, dt: datetime, section: str, optionals: list[str]) -> list[Lesson]:
+    def get_lessons(cls, day: str, section: str, optionals: list[str]) -> list[Lesson]:
+        with open('data.json') as f:
+            data = json.load(f)
         if len(optionals) != 4:
             raise ValueError("All four optionals must be specified")
         if section.upper() not in "KGSTLRMW":
             raise ValueError(f"Invalid section {section}")
 
-        day = dt.strftime("%a").upper()
         if day in ["SAT", "SUN"]:
             day = "MON"
 
-        with open("data.json", encoding="utf-8") as f:
-            data = json.load(f)
 
         lessons = data[day]["lesson-order"]
-
         for i, lesson in enumerate(data[day]["comp-lessons"]):
             if lesson is None:
                 continue

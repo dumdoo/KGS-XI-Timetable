@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@400;700&display=swap');
+
+$accent-color: #4f4789;
+$light-trans-accent-color: hsla(247, 32%, 41%, 70%);
+$lighter-accent-color: #f2f2f8;
+
 body {
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
