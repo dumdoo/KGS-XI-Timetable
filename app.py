@@ -4,12 +4,17 @@ import json
 from zoneinfo import ZoneInfo
 from ast import literal_eval
 from flask import *
+from werkzeug.middleware.proxy_fix import ProxyFix
+
 
 with open("data.json") as f:
     data = json.load(f)
 
 app = Flask(__name__)
 app.jinja_env.globals.update(zip=zip)
+app.wsgi_app = ProxyFix(
+    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
+)
 
 
 def get_current_dt() -> datetime:
