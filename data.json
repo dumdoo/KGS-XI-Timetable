@@ -32,6 +32,55 @@
         ],
         "Friday": []
     },
+    "OPT-A": {
+        "A-ART": "Art Room 2",
+        "A1-AM": "N4",
+        "A2-AM": "P1",
+        "A1-BIO": "BIO2",
+        "A2-BIO": "P9",
+        "A1-CHEM": "N10",
+        "A2-CHEM": "N2",
+        "A-ECO": "P7",
+        "A1-PHY": "PHY1",
+        "A2-PHY": "PHY3"
+    },
+    "OPT-B": {
+        "B-ACC": "N3",
+        "B-AM": "P1",
+        "B-BIO": "P9",
+        "B1-CHEM": "CHEM4",
+        "B2-CHEM": "N10",
+        "B-CS": "ICT2",
+        "B-ECO": "P7",
+        "B1-HIST": "S9",
+        "B2-HIST": "F1",
+        "B1-PHY": "S10",
+        "B2-PHY": "PHY3"
+    },
+    "OPT-C": {
+        "C-ACC": "P11",
+        "C-AM": "N2",
+        "C-BIO": "P9",
+        "C1-CHEM": "N11",
+        "C2-CHEM": "CHEM5",
+        "C-ECO": "P6",
+        "C1-PHY": "PHY1",
+        "C2-PHY": "PHY5",
+        "C-SOCIO": "Lecture Theatre"
+    },
+    "OPT-D": {
+        "D1-AM": "N2",
+        "D2-AM": "P3",
+        "D-BIO": "BIO1",
+        "D1-CHEM": "CHEM3",
+        "D2-CHEM": "CHEM4",
+        "D-CS": "ICT1",
+        "D-ECO": "S1",
+        "D-GEOG": "F6",
+        "D1-PHY": "PHY3",
+        "D2-PHY": "PHY1",
+        "D-SOCIO": "S6"
+    },
     "MON": {
         "lesson-order": [
             "OPT-D",
@@ -182,44 +231,184 @@
                     "F7"
                 ]
             }
+        ]
+    },
+    "TUE": {
+        "lesson-order": [
+            "OPT-D",
+            "OPT-A",
+            "OPT-C",
+            "COMP",
+            "OPT-B",
+            "COMP",
+            "COMP"
         ],
-        "OPT-A": null,
-        "OPT-B": {
-            "B-ACC": "N3",
-            "B-AM": "P1",
-            "B-BIO": "P9",
-            "B1-CHEM": "CHEM4",
-            "B2-CHEM": "N10",
-            "B-CS": "ICT2",
-            "B-ECO": "P7",
-            "B1-HIST": "S9",
-            "B2-HIST": "F1",
-            "B1-PHY": "S10",
-            "B2-PHY": "PHY3"
-        },
-        "OPT-C": {
-            "C-ACC": "P11",
-            "C-AM": "N2",
-            "C-BIO": "P9",
-            "C1-CHEM": "N11",
-            "C2-CHEM": "CHEM5",
-            "C-ECO": "P6",
-            "C1-PHY": "PHY1",
-            "C2-PHY": "PHY5",
-            "C-SOCIO": "Lecture Theatre"
-        },
-        "OPT-D": {
-            "D1-AM": "N2",
-            "D2-AM": "P3",
-            "D-BIO": "BIO1",
-            "D1-CHEM": "CHEM3",
-            "D2-CHEM": "CHEM4",
-            "D-CS": "ICT1",
-            "D-ECO": "S1",
-            "D-GEOG": "F6",
-            "D1-PHY": "PHY3",
-            "D2-PHY": "PHY1",
-            "D-SOCIO": "S6"
-        }
+        "comp-lessons": [
+            null,
+            null,
+            null,
+            {
+                "K": [
+                    "MA",
+                    "N4"
+                ],
+                "G": [
+                    "URDU",
+                    "Urdu Room"
+                ],
+                "S": [
+                    "LIT",
+                    "S5"
+                ],
+                "T": [
+                    "URDU",
+                    "F5"
+                ],
+                "L": [
+                    "LANG",
+                    "S2"
+                ],
+                "R": [
+                    "MA",
+                    "N6"
+                ],
+                "M": [
+                    "URDU",
+                    "F8"
+                ],
+                "W": [
+                    "URDU",
+                    "F7"
+                ]
+            },
+            null,
+            {
+                "K": [
+                    "PE",
+                    "Front Yard"
+                ],
+                "G": [
+                    "MA",
+                    "N4"
+                ],
+                "S": [
+                    "LANG",
+                    "S5"
+                ],
+                "T": [
+                    "MA",
+                    "N2"
+                ],
+                "L": [
+                    "MA",
+                    "P4"
+                ],
+                "R": [
+                    "LIB",
+                    "Library"
+                ],
+                "M": [
+                    "LIT",
+                    "S7"
+                ],
+                "W": [
+                    "PE",
+                    "Front Yard"
+                ]
+            },
+            {
+                "K": [
+                    "PE",
+                    "Front Yard"
+                ],
+                "G": [
+                    "LANG",
+                    "S7"
+                ],
+                "S": [
+                    "URDU",
+                    "F8"
+                ],
+                "T": [
+                    "LANG",
+                    "S1"
+                ],
+                "L": [
+                    "URDU",
+                    "Urdu Room"
+                ],
+                "R": [
+                    "URDU",
+                    "F7"
+                ],
+                "M": [
+                    "LANG",
+                    "F2"
+                ],
+                "W": [
+                    "PE",
+                    "Front Yard"
+                ]
+            }
+        ]
+    },
+    "WED": {
+        "lesson-order": [
+            "OPT-D",
+            "OPT-A",
+            "COMP",
+            "COMP",
+            "OPT-B",
+            "OPT-C",
+            "COMP"
+        ],
+        "comp-lessons": [
+            null,
+            null,
+            null,
+            {
+                "K": [
+                    "MA",
+                    "N4"
+                ],
+                "G": [
+                    "URDU",
+                    "Urdu Room"
+                ],
+                "S": [
+                    "LIT",
+                    "S5"
+                ],
+                "T": [
+                    "URDU",
+                    "F5"
+                ],
+                "L": [
+                    "LANG",
+                    "S2"
+                ],
+                "R": [
+                    "MA",
+                    "N6"
+                ],
+                "M": [
+                    "URDU",
+                    "F8"
+                ],
+                "W": [
+                    "URDU",
+                    "F7"
+                ],
+            },
+            null,
+            {"K": ["PE", "Front Yard"],
+        "G": ["MA", "N4"],
+    "S": ["LANG", "S5"],
+"T": ["MA", "N2"],
+"L": ["MA", "P4"],
+"R":["LIB", "Library"],
+"M": ["LIT", "S7"],
+"W": ["PE", "Front Yard"]}
+        ]
     }
 }
