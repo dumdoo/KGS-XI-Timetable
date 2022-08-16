@@ -35,8 +35,8 @@
             padding: 0.2rem;
             border-radius: .3rem;
 
-            >option:hover {
-                background: blue
+            >option {
+                cursor: pointer;
             }
         }
 
