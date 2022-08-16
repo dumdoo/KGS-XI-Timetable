@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>XI Timetable</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles/set_subjects.css')}}">
 </head>
+
 <body>
     <div class="container">
         <h2>Select your Section and Subjects</h2>
@@ -16,55 +18,65 @@
             </label>
             <select name="section" id="section">
                 {% for section in 'KGSTLRMW' %}
-                    <option value="{{section}}">
-                        XI-{{ section|e }}
-                    </option>
+                <option value="{{section}}">
+                    XI-{{ section|e }}
+                </option>
                 {% endfor %}
             </select>
 
-            {% set optionals_a = ['A-ART', 'A1-AM', 'A2-AM', 'A1-BIO', 'A2-BIO', 'A1-CHEM', 'A2-CHEM', 'A-ECO', 'A1-PHY', 'A2-PHY'] %}
-            {% set optionals_b = ['B-ACC', 'B-AM', 'B-BIO', 'B1-CHEM', 'B2-CHEM', 'B-CS', 'B-ECO', 'B1-HIST', 'B2-HIST', 'B1-PHY', 'B2-PHY'] %}
-            {% set optionals_c = ['C-ACC', 'C-AM', 'C-BIO', 'C1-CHEM', 'C2-CHEM', 'C-ECO', 'C1-HIST', 'C1-PHY', 'C2-PHY', 'C-SOCIO'] %}
-            {% set optionals_d = ['D1-AM', 'D2-AM', 'D-BIO', 'D-CS', 'D1-CHEM', 'D2-CHEM', 'D-ECO', 'D-GEOG', 'D1-PHY', 'D2-PHY', 'D-SOCIO'] %}
+            {% set optionals_a = ['A-ART', 'A1-AM', 'A2-AM', 'A1-BIO', 'A2-BIO', 'A1-CHEM', 'A2-CHEM', 'A-ECO',
+            'A1-PHY', 'A2-PHY'] %}
+            {% set optionals_b = ['B-ACC', 'B-AM', 'B-BIO', 'B1-CHEM', 'B2-CHEM', 'B-CS', 'B-ECO', 'B1-HIST', 'B2-HIST',
+            'B1-PHY', 'B2-PHY'] %}
+            {% set optionals_c = ['C-ACC', 'C-AM', 'C-BIO', 'C1-CHEM', 'C2-CHEM', 'C-ECO', 'C1-HIST', 'C1-PHY',
+            'C2-PHY', 'C-SOCIO'] %}
+            {% set optionals_d = ['D1-AM', 'D2-AM', 'D-BIO', 'D-CS', 'D1-CHEM', 'D2-CHEM', 'D-ECO', 'D-GEOG', 'D1-PHY',
+            'D2-PHY', 'D-SOCIO'] %}
 
             <label for="OPT-A">OPT-A</label>
             <select name="OPT-A" id="OPT-A">
                 {% for subject in optionals_a %}
-                    <option value="{{subject}}">
-                        {{subject}}
-                    </option>
+                <option value="{{subject}}">
+                    {{subject}}
+                </option>
                 {% endfor %}
             </select>
 
             <label for="OPT-B">OPT-B</label>
             <select name="OPT-B" id="OPT-B">
                 {% for subject in optionals_b %}
-                    <option value="{{subject}}">
-                        {{subject}}
-                    </option>
+                <option value="{{subject}}">
+                    {{subject}}
+                </option>
                 {% endfor %}
             </select>
 
             <label for="OPT-C">OPT-C</label>
             <select name="OPT-C" id="OPT-C">
                 {% for subject in optionals_c %}
-                    <option value="{{subject}}">
-                        {{subject}}
-                    </option>
+                <option value="{{subject}}">
+                    {{subject}}
+                </option>
                 {% endfor %}
             </select>
 
             <label for="OPT-D">OPT-D</label>
             <select name="OPT-D" id="OPT-D">
                 {% for subject in optionals_d %}
-                    <option value="{{subject}}">
-                        {{subject}}
-                    </option>
+                <option value="{{subject}}">
+                    {{subject}}
+                </option>
                 {% endfor %}
             </select>
+
+            <label for="remedial-urdu">Remedial Urdu</label>
+            <div class="remedial-urdu-container">
+                <input type="checkbox" id="remedial-urdu" name="remedial-urdu" value="remedial-urdu">
+            </div>
             <input type="submit" value="Submit">
         </form>
-        
+
     </div>
 </body>
+
 </html>

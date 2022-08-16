@@ -1,6 +1,66 @@
 @import './base';
 
-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+
+.container {
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: .3rem;
+
+    >form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        border-collapse: collapse;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+        padding: 1rem .7rem;
+
+        >label {
+            font-size: 1.2rem;
+            padding: .2rem;
+        }
+
+        >select {
+            font-family: "Raleway", sans-serif;
+            font-size: 1.2rem;
+            text-align: center;
+            background: $accent-color;
+            color: white;
+            padding: 0.2rem;
+            border-radius: .3rem;
+
+            >option:hover {
+                background: blue
+            }
+        }
+
+        >input[type=submit] {
+            background: $accent-color;
+            color: white;
+            padding: .2rem;
+            border: none;
+            cursor: pointer;
+            min-width: 160px;
+            font-size: 1.2rem;
+            border-radius: .3rem;
+            grid-column:span 2;
+        }
+        .remedial-urdu-container {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin: auto;
+
+            >input[type=checkbox] {
+                cursor: pointer;
+                transform: scale(2);
+            }
+        }
+    }
 }

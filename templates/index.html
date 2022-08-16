@@ -11,7 +11,17 @@
 
 <body>
     <div class="container">
-        <h2>{{day}}</h2>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <h2>{{day}}</h2>
+            </button>
+            <div class="dropdown-content">
+                {% for d in ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] if not d == day%}
+                    {% set df = d[:3].upper() %}
+                    <a href="{{ url_for('index', day=df) }}">{{ d }}</a>
+                {% endfor %}
+            </div>
+        </div>
         <table>
             <thead>
                 <td class="timing">Times</td>

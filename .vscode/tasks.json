@@ -6,7 +6,7 @@
         {
             "label": "Compile Sass",
             "type": "shell",
-            "command": "sass static/styles -s compressed -w",
+            "command": "sass static/styles -s compressed -w  --no-source-map",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
