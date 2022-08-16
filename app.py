@@ -71,3 +71,7 @@ def index():
     }[day]
 
     return render_template("index.html", lessons=lessons, day=full_day, times=t)
+
+@app.route("/favicon.png")
+def favicon():
+    return app.send_static_file('favicon.png')
