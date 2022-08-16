@@ -398,17 +398,54 @@
                 "W": [
                     "URDU",
                     "F7"
-                ],
+                ]
             },
             null,
-            {"K": ["PE", "Front Yard"],
-        "G": ["MA", "N4"],
-    "S": ["LANG", "S5"],
-"T": ["MA", "N2"],
-"L": ["MA", "P4"],
-"R":["LIB", "Library"],
-"M": ["LIT", "S7"],
-"W": ["PE", "Front Yard"]}
+            {
+                "K": [
+                    "PE",
+                    "Front Yard"
+                ],
+                "G": [
+                    "MA",
+                    "N4"
+                ],
+                "S": [
+                    "LANG",
+                    "S5"
+                ],
+                "T": [
+                    "MA",
+                    "N2"
+                ],
+                "L": [
+                    "MA",
+                    "P4"
+                ],
+                "R": [
+                    "LIB",
+                    "Library"
+                ],
+                "M": [
+                    "LIT",
+                    "S7"
+                ],
+                "W": [
+                    "PE",
+                    "Front Yard"
+                ]
+            }
+        ]
+    },
+    "THU": {
+        "lesson-order": [
+            "OPT-A",
+            "OPT-D",
+            "OPT-B",
+            "COMP",
+            "COMP",
+            "COMP",
+            "COMP"
         ]
     }
 }
