@@ -27,7 +27,7 @@ def set_subjects():
     if request.method == "GET":
         return render_template("set_subjects.html")
     resp = make_response(redirect(url_for("index")))
-    resp.set_cookie("subjects", json.dumps(dict(request.form)), domain=".roh.works", max_age=60 * 60 * 24 * 90)
+    resp.set_cookie("subjects", json.dumps(dict(request.form)), max_age=60 * 60 * 24 * 90)
     return resp
 
 
