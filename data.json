@@ -446,24 +446,24 @@
                     "N4"
                 ],
                 "G": [
-                    "URDU",
-                    "Urdu Room"
+                    "PE",
+                    "Front Yard"
                 ],
                 "S": [
-                    "LIT",
-                    "S5"
+                    "MATH",
+                    "P4"
                 ],
                 "T": [
-                    "URDU",
-                    "F5"
+                    "LIB",
+                    "Library"
                 ],
                 "L": [
-                    "LANG",
-                    "S2"
+                    "PE",
+                    "Front Yard"
                 ],
                 "R": [
-                    "MATH",
-                    "N6"
+                    "LIT",
+                    "S7"
                 ],
                 "M": [
                     "PE",
@@ -482,36 +482,36 @@
             null,
             {
                 "K": [
-                    "PE",
-                    "Front Yard"
+                    "LIT",
+                    "S8"
                 ],
                 "G": [
-                    "MATH",
-                    "N4"
+                    "URDU",
+                    "Urdu Room"
                 ],
                 "S": [
-                    "LANG",
-                    "S5"
+                    "URDU",
+                    "F8"
                 ],
                 "T": [
-                    "MATH",
-                    "N2"
+                    "URDU",
+                    "F5"
                 ],
                 "L": [
                     "MATH",
                     "P4"
                 ],
                 "R": [
-                    "LIB",
-                    "Library"
+                    "URDU",
+                    "F7"
                 ],
                 "M": [
-                    "LIT",
-                    "S7"
+                    "MATH",
+                    "N7"
                 ],
                 "W": [
-                    "PE",
-                    "Front Yard"
+                    "LIB",
+                    "Library"
                 ],
                 "RC": [
                     "URDU",
@@ -561,12 +561,12 @@
                     "N1"
                 ],
                 "M": [
-                    "MATH",
-                    "N6"
+                    "URDU",
+                    "F8"
                 ],
                 "W": [
-                    "LANG",
-                    "S2"
+                    "LIT",
+                    "S7"
                 ],
                 "RC": [
                     "URDU",
@@ -743,7 +743,7 @@
                     "P4"
                 ],
                 "T": [
-                    "LIT",
+                    "MATH",
                     "N2"
                 ],
                 "L": [
