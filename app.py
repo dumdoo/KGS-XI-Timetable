@@ -12,9 +12,7 @@ with open("data.json") as f:
 
 app = Flask(__name__)
 app.jinja_env.globals.update(zip=zip)
-app.wsgi_app = ProxyFix(
-    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
-)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
 
 def get_current_dt() -> datetime:
@@ -27,7 +25,9 @@ def set_subjects():
     if request.method == "GET":
         return render_template("set_subjects.html")
     resp = make_response(redirect(url_for("index")))
-    resp.set_cookie("subjects", json.dumps(dict(request.form)), max_age=60 * 60 * 24 * 90)
+    resp.set_cookie(
+        "subjects", json.dumps(dict(request.form)), max_age=60 * 60 * 24 * 90
+    )
     return resp
 
 
@@ -51,7 +51,9 @@ def index():
         [
             literal_eval(request.cookies["subjects"])[opt]
             for opt in ["OPT-A", "OPT-B", "OPT-C", "OPT-D"]
-        ], bool(literal_eval(request.cookies.get("subjects")).get("remedial-urdu", False)))
+        ],
+        bool(literal_eval(request.cookies.get("subjects")).get("remedial-urdu", False)),
+    )
     with open("data.json") as f:
         data = json.load(f)
 
@@ -72,6 +74,7 @@ def index():
 
     return render_template("index.html", lessons=lessons, day=full_day, times=t)
 
+
 @app.route("/favicon.png")
 def favicon():
-    return app.send_static_file('favicon.png')
+    return app.send_static_file("favicon.png")
